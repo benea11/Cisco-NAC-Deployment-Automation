@@ -1,0 +1,65 @@
+!
+aaa new-model
+aaa session-id common
+!
+radius server {{primary_name}}
+address ipv4 {{primary_ip}} auth-port 1812 acct-port 1813
+key xxxx
+!
+radius server {{secondary_name}}
+address ipv4 {{secondary_ip}} auth-port 1812 acct-port 1813
+key xxxx
+!
+aaa group server radius ISE
+server name {{primary_name}}
+server name {{secondary_name}}
+!
+aaa authentication dot1x default group ISE
+aaa authorization network default group ISE
+aaa accounting update newinfo periodic 2880
+aaa accounting dot1x default start-stop group ISE
+aaa accounting system default start-stop group ISE
+!
+aaa server radius dynamic-author
+client {{primary_ip}} server-key xxxx
+client {{secondary_ip}} server-key xxxx
+
+! Vendor specific attributes
+radius-server attribute 6 on-for-login-auth
+radius-server attribute 8 include-in-access-req
+radius-server attribute 25 access-request include
+radius-server attribute 31 mac format ietf upper-case
+radius-server attribute 31 send nas-port-detail mac-only
+radius-server dead-criteria time 10 tries 3
+radius-server deadtime 15
+!
+dot1x system-auth-control
+!
+logging discriminator NAC facility drops AUTHMGR|MAB|DOT1X
+logging buffered discriminator NAC
+logging console discriminator NAC
+logging monitor discriminator NAC
+!
+ip http server
+ip http secure-server
+ip http secure-active-session-modules none
+ip http max-connections 20
+ip http active-session-modules none
+ip domain name domain.name
+
+ip access-list extended ACL_WEBAUTH_REDIRECT
+permit tcp any any eq www
+permit tcp any any eq 443
+
+ip access-list extended IPV4_PRE_AUTH_ACL
+permit udp any eq bootpc any eq bootps
+permit udp any any eq domain
+permit icmp any any
+permit udp any any eq ntp
+deny ip any any
+
+
+
+
+exit
+crypto key generate rsa general-keys mod 2048
