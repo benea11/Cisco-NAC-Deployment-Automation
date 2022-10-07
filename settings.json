@@ -1,0 +1,144 @@
+{
+  "region_finder": [
+    {
+      "Argentina": "AMS-Secondary",
+      "Brazil": "AMS-Secondary",
+      "Canada": "AMS-Secondary",
+      "Chile": "AMS-Secondary",
+      "Colombia": "AMS-Secondary",
+      "Costa Rica": "AMS-Secondary",
+      "Mexico": "AMS-Secondary",
+      "Peru": "AMS-Secondary",
+      "United States": "AMS-Primary",
+      "Australia": "APAC-Primary",
+      "Cambodia": "APAC-Primary",
+      "Hong Kong": "APAC-Primary",
+      "India": "APAC-Secondary",
+      "Indonesia": "APAC-Primary",
+      "Japan": "APAC-Primary",
+      "Korea": "APAC-Primary",
+      "Laos": "APAC-Primary",
+      "Malaysia": "APAC-Primary",
+      "Mongolia": "APAC-Primary",
+      "Myanmar": "APAC-Primary",
+      "New-Zealand": "APAC-Primary",
+      "Philippines": "APAC-Primary",
+      "Singapore": "APAC-Primary",
+      "Taiwan": "APAC-Primary",
+      "Thailand": "APAC-Primary",
+      "Vietnam": "APAC-Primary",
+      "Algeria": "EMEA2",
+      "Austria": "EMEA2",
+      "Azerbaijan": "EMEA2",
+      "Belarus": "EMEA2",
+      "Belgium": "EMEA2",
+      "Bulgaria": "EMEA2",
+      "Cameroon": "EMEA2",
+      "Congo": "EMEA2",
+      "Croatia": "EMEA2",
+      "Cuba": "EMEA2",
+      "Czech Republic": "EMEA2",
+      "Denmark": "EMEA2",
+      "Egypt": "EMEA2",
+      "Estonia": "EMEA2",
+      "Finland": "EMEA2",
+      "France": "EMEA1",
+      "Germany": "EMEA2",
+      "Hungary": "EMEA2",
+      "Ireland": "EMEA2",
+      "Israel": "EMEA2",
+      "Italy": "EMEA1",
+      "Ivory Coast": "EMEA2",
+      "Kazakhstan": "EMEA2",
+      "Kenya": "EMEA2",
+      "Kuwait": "EMEA2",
+      "Latvia": "EMEA2",
+      "Lebanon": "EMEA2",
+      "Lithuania": "EMEA2",
+      "Luxembourg": "EMEA2",
+      "Morocco": "EMEA2",
+      "Netherlands": "EMEA2",
+      "Nigeria": "EMEA2",
+      "Norway": "EMEA2",
+      "Oman": "EMEA2",
+      "Pakistan": "EMEA2",
+      "Poland": "EMEA2",
+      "Portugal": "EMEA1",
+      "Qatar": "EMEA2",
+      "Romania": "EMEA2",
+      "Russia": "EMEA2",
+      "Saudi Arabia": "EMEA2",
+      "Serbia": "EMEA2",
+      "Slovakia": "EMEA2",
+      "Slovenia": "EMEA2",
+      "South Africa": "EMEA2",
+      "Spain": "EMEA1",
+      "Sweden": "EMEA2",
+      "Switzerland": "EMEA2",
+      "Tunisia": "EMEA2",
+      "Turkey": "EMEA2",
+      "UK": "EMEA2",
+      "Ukraine": "EMEA2",
+      "United Arab Emirates": "EMEA2",
+      "China": "China-all"
+    }
+  ],
+  "region_settings": {
+    "EMEA1": [
+      {
+        "primary_name": "EU_SERVER_2",
+        "primary_ip": "10.1.1.1",
+        "secondary_name": "EU_SERVER_1",
+        "secondary_ip": "10.5.5.5"
+      }
+    ],
+    "EMEA2": [
+      {
+        "primary_name": "EU_SERVER_1",
+        "primary_ip": "10.2.2.2",
+        "secondary_name": "EU_SERVER_2",
+        "secondary_ip": "10.6.6.6"
+      }
+    ],
+    "AMS-Primary": [
+      {
+        "primary_name": "AMS_SERVER_1",
+        "primary_ip": "10.3.3.3",
+        "secondary_name": "AMS_SERVER_2",
+        "secondary_ip": "10.4.4.4"
+      }
+    ],
+    "AMS-Secondary": [
+      {
+        "primary_name": "AMS_SERVER_2",
+        "primary_ip": "10.7.7.7",
+        "secondary_name": "AMS_SERVER_1",
+        "secondary_ip": "10.8.8.8"
+      }
+    ],
+    "APAC-Primary": [
+      {
+        "primary_name": "APAC_SERVER_1",
+        "primary_ip": "10.9.9.9",
+        "secondary_name": "APAC_SERVER_2",
+        "secondary_ip": "10.10.10.10"
+      }
+    ],
+    "APAC-Secondary": [
+      {
+        "primary_name": "APAC_SERVER_2",
+        "primary_ip": "10.11.11.11",
+        "secondary_name": "APAC_SERVER_1",
+        "secondary_ip": "10.12.12.12"
+      }
+    ],
+    "China": [
+      {
+        "primary_name": "CN_SERVER_2",
+        "primary_ip": "10.13.13.13",
+        "secondary_name": "CN_SERVER_1",
+        "secondary_ip": "10.14.14.14"
+      }
+    ]
+  }
+}
